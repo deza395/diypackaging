@@ -1,0 +1,206 @@
+@import "normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+header{
+  background-color: rgb(217, 7, 26);
+}
+
+body {
+  color: #495057;
+  background-image: url(../img/leaves-pattern.png);
+}
+
+
+h3, h4 {
+  color: #bfb29f;
+}
+
+/* Clases del topbar que contiene logo y telefono */
+.topbar{
+ padding: 10px 0;
+}
+
+.topbar .row {
+  align-items: center;
+}
+/* header */
+.phone {
+  color: #bfb29f;
+}
+
+.phone ::before {
+  content: "☎";
+  font-size: 0.8em;
+}
+
+.user {
+  color: #bfb29f;
+}
+
+.fa-shopping-cart{
+  color: #bfb29f;
+}
+
+.logo {
+  max-height: 140px;
+}
+
+.icons-separator {
+  border-right: 1px solid gray;
+}
+/* NAVBAR */
+
+.navbar {
+  background-color: #efe4d5;
+}
+/* Centro hamburguesa */
+.navbar-toggler {
+  margin: 0 auto;
+}
+
+.btn-search {
+  background-color: #fff;
+  border: 1px solid #efe4d5;
+  color: #bfb29f;
+}
+
+.btn-search:hover {
+  background-color: #efe4d5;
+  border: 1px solid #fff;
+  color: #fff;
+}
+/* Clases sección más vendidos */
+.sellers {
+  margin-top: 40px;
+}
+
+.sellers .card-body {
+  padding: 0.25rem !important;
+  margin-bottom: 10px !important;
+}
+
+h5 {
+  color: red;
+}
+/* Clases sección destacados */
+.destacados{
+  margin-top: 40px;
+}
+
+.destacados-product{
+  padding: 0 15px;
+  margin: 10px 0;
+}
+
+.destacados-product {
+  width: 100%;
+}
+
+/* Clase sección ideas */
+.ideas {
+  margin-top: 40px;
+}
+
+.ideas-product {
+  padding: 0 15px;
+  margin: 10px 0;
+}
+
+/* Clase sección Newsletter */
+.social-newsletter{
+  margin-top: 40px;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-newsletter {
+  background-color: #bfb29f;
+  color: #fff;
+}
+
+.btn-newsletter:hover {
+  background-color: #fff;
+  border: 1px solid #bfb29f;
+  color: #bfb29f;
+}
+
+.fa-facebook-f, .fa-twitter, .fa-instagram {
+  color: #bfb29f;
+}
+
+.fa-facebook-f:hover, .fa-twitter:hover, .fa-instagram:hover {
+  color: #d0d0d0;
+  cursor: pointer;
+}
+
+/* Clases Footer */
+footer {
+  margin-top: 20px;
+}
+
+
+/* FAQS */
+.btn-link {
+  color: #8A8884;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  color: #bfb29f;
+}
+
+
+/* Registro */
+
+.fa-user {
+  color: #bfb29f;
+}
+
+
+/*Productos */
+
+.sellers-prod .card {
+  flex: 1 0 20%;
+}
+.card-body {
+ color: #bfb29f;
+}
+
+/* .card :hover{
+  transform: scale(0.95);
+}
+.card {
+  transition: all 0.5s linear;
+} */
+
+/* Media Queries */
+
+/* Medium devices (tablets, upto 768px) */
+@media (max-width: 768px) {
+            .logo { max-height: 100px;
+                    }
+                    /* Acomodo el tamaño de las tarjetas tomadas de boostrap */
+            .card-deck .card{
+              flex: 1 0 25%;
+            }
+
+            .social-networks {
+              margin-top: 20px;
+              justify-content: space-between;
+              }
+}
+
+/* Medium devices (tablets and small computers) */
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Acomodo el tamaño de las tarjetas tomadas de boostrap */
+  .card-deck .card {
+    flex: 1 0 30%;
+  }
+}
