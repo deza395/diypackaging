@@ -14,7 +14,7 @@
 // ruta del index
 Route::get('/index', function () {
     return view('');
-// });
+ });
 //
 // // ruta productos
 // Route::get('/productos', function () {
