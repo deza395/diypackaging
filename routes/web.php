@@ -12,14 +12,22 @@
 */
 // creo las rutas que vamos a usar para el proyecto, por el momento estan vacias
 // ruta del index
-Route::get('/index', function () {
-    return view('');
- });
-//
-// // ruta productos
-// Route::get('/productos', function () {
+// Route::get('/index', function () {
 //     return view('');
-// });
+
+Route::get('/index',function (){
+  return view ('front.index');
+});
+
+
+Route::get('/somos',function (){
+  return view ('front.somos');
+});
+
+// ruta productos
+Route::get('/productos', function () {
+    return view('front.productos');
+ });
 // // ruta diseños
 // Route::get('/personalizados', function () {
 //     return view('');
@@ -29,9 +37,9 @@ Route::get('/index', function () {
 //     return view('');
 // });
 // // ruta FAQ
-// Route::get('/faq', function () {
-//     return view('');
-// });
+Route::get('/faq', function () {
+    return view('front.faq');
+});
 // // ruta Iniciar sesion
 // Route::get('/ingresar', function () {
 //     return view('');
