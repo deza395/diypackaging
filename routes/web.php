@@ -45,9 +45,9 @@ Route::get('/faq', function () {
 //     return view('');
 // });
 // // ruta registro
-// Route::get('/registro', function () {
-//     return view('');
-// });
+Route::get('/registro', function () {
+    return view('auth.registro');
+});
 // // ruta perfil
 // Route::get('/perfil', function () {
 //     return view('');
