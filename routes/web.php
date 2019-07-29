@@ -46,17 +46,10 @@ Route::get('/productos', function () {
 // Route::get('/accesorios', function () {
 //     return view('');
 // });
-
 // // ruta FAQ
 Route::get('/faq', function () {
     return view('front.faq');
 });
-
-
-
-// // ruta registro
-
-
 // // ruta perfil
 // Route::get('/perfil', function () {
 //     return view('');
