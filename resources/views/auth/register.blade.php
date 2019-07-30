@@ -1,88 +1,77 @@
-<!-- // Incluimos las funciones de registro
-// De esta manera tengo el scope a la funciones que necesito -->
-@extends('front.template')
+@extends('layouts.app')
 
-@section('pageTitle', 'registro')
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Register') }}</div>
 
-@section ('mainContent')
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
 
- <div class="container1">
-  <div class="row">
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-  <!--  principio del registro-->
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-    <div class=" col-12">
-      <form class="formulario" action="{{url('/register')}}" method="post" enctype="multipart/form-data">
-            @csrf
-           <h2>Registrarse </h2>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-            <label class="campo-formulario">
-							<input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" autocomplete="nombre" autofocus placeholder="Nombre">
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-							@error('nombre')
-									<span class="invalid-feedback" role="alert">
-											<strong>{{ $message }}</strong>
-									</span>
-							@enderror
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-            </label>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-             <label class="campo-formulario">
-							 <input id="username" type="tex" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" placeholder="username">
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
- 							@error('username')
- 									<span class="invalid-feedback" role="alert">
- 											<strong>{{ $message }}</strong>
- 									</span>
- 							@enderror
-           </label>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-            <label class="campo-formulario">
-							<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="email">
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-							@error('email')
-									<span class="invalid-feedback" role="alert">
-											<strong>{{ $message }}</strong>
-									</span>
-							@enderror
-            </label>
-           <label class="campo-formulario">
-						 <input id="pais" type="text" class="form-control @error('pais') is-invalid @enderror" name="pais" value="{{ old('pais') }}" autocomplete="pais" placeholder="pais">
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
 
-						 @error('pais')
-								 <span class="invalid-feedback" role="alert">
-										 <strong>{{ $message }}</strong>
-								 </span>
-						 @enderror
-          </label>
-
-
-          <label class="campo-formulario">
-						<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password"placeholder="contraseña">
-
-						@error('password')
-								<span class="invalid-feedback" role="alert">
-										<strong>{{ $message }}</strong>
-								</span>
-						@enderror
-
-          <label class="campo-formulario">
-						<input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password" placeholder="confirme contraseña">
-
-          </label>
-
-					<!-- <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" autocomplete="avatar">
-					@error('avatar')
-							<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
-							</span>
-					@enderror -->
-      <div >
-        <button class="boton"type="submit" name="button">Crear cuenta</button>
-      </div>
-  </form>
-
-  </div>
-<!--  final del registro-->
-	@endsection
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

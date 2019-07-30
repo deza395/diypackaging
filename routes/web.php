@@ -58,3 +58,7 @@ Route::get('/faq', function () {
 // Route::get('/carrito', function () {
 //     return view('');
 // });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

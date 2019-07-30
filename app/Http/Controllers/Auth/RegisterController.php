@@ -53,7 +53,10 @@ class RegisterController extends Controller
             'username'=> ['required', 'string', 'max:255'],
             'password' => ['required', 'min:8', 'confirmed'],
             'pais'=> ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users','confirmed', 'regex:/DH/'],
+          ], [
+        'required' => 'El campo :attribute es obligatorio',
+        'password.regex' => 'La contraseña debe tener las letras DH'
         ]);
     }
 
@@ -63,9 +66,16 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\User
+
      */
     protected function create(array $data)
     {
+
+     $request = request();
+     $profileImage = $request->file('avatar');
+     $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
+     $profileImage->storePubliclyAs("public/avatars", $profileImageName);
+
         return User::create([
             'nombre' => $data['nombre'],
             'username' => $data['username'],
