@@ -26,9 +26,13 @@ Auth::routes();
 
 Route::get('/testdb/{id}', 'DbController@index');
 
+
+Route::get('/perfil', 'UserController@showProfile');
+
 Route::get('/somos',function (){
   return view ('front.somos');
 });
+
 
 // ruta productos
 Route::get('/productos', function () {

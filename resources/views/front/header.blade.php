@@ -15,6 +15,15 @@
      <div class="col-4 text-right">
        <a href="{{url('/login')}}" class="user">
          <i class="fa fa-user pr-3"></i></a>
+         <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+         </a>
+
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             @csrf
+         </form>
        <span class="icons-separator"></span>
        <i class="fa fa-shopping-cart pl-3"></i>
      </div>

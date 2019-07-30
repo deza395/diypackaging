@@ -16,6 +16,16 @@ class UserController extends Controller
         //
     }
 
+    public function showProfile()
+    {
+      if (Auth::guest()){
+        return view ('auth.login');
+      } else {
+      return view ('front.index');
+    }
+      return view ('front.perfil');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
