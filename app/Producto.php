@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Wishlist;
 
 class Producto extends Model
 {
@@ -14,4 +15,8 @@ class Producto extends Model
   protected $fillable = [
         'imagen', 'nombre', 'precio','ref'
   ];
+
+  public function wishlist(){
+     return $this->hasMany(Wishlist::class);
+  }
 }

@@ -16,7 +16,7 @@
         <a class="nav-link" href="/somos">¿Quiénes Somos?</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="productos.php">Productos<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/productos">Productos<span class="sr-only">(current)</span></a>
       </li>
 
       <!-- <li class="nav-item">

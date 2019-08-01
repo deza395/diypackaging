@@ -166,7 +166,7 @@ footer {
 
 /* Registro */
 
-.fa-user {
+.fa-user, .fa-user-slash {
   color: #bfb29f;
 }
 

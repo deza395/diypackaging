@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -21,7 +21,7 @@ class UserController extends Controller
       if (Auth::guest()){
         return view ('auth.login');
       } else {
-      return view ('front.index');
+      return view ('userviews.userprofile');
     }
       return view ('front.perfil');
     }

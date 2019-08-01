@@ -65,9 +65,16 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\User
+
      */
     protected function create(array $data)
     {
+
+     $request = request();
+     $profileImage = $request->file('avatar');
+     $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
+     $profileImage->storePubliclyAs("public/avatars", $profileImageName);
+
         return User::create([
             'nombre' => $data['nombre'],
             'username' => $data['username'],

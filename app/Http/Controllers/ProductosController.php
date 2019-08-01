@@ -19,8 +19,13 @@ class ProductosController extends Controller
     public function getById($id)
     {
         $producto = Producto::find($id);
+        return view ('front.producto',compact('producto'));
+    }
 
-        return view ('front.productos',compact('producto'));
+    public function getAll()
+    {
+      $productos = Producto::all();
+      return view ('front.productos',compact('productos'));
     }
 
     /**

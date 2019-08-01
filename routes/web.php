@@ -35,12 +35,10 @@ Route::get('/somos',function (){
 
 
 // ruta productos
-Route::get('/productos', function () {
-    return view('front.productos');
- });
+Route::get('/productos', 'ProductosController@getAll');
 
  // ruta productos
- Route::get('/productos/{id}', 'ProductosController@getById');
+ Route::get('/producto/{id}', 'ProductosController@getById');
 
 // // ruta diseños
 // Route::get('/personalizados', function () {
@@ -54,6 +52,8 @@ Route::get('/productos', function () {
 Route::get('/faq', function () {
     return view('front.faq');
 });
+
+Route::resource('/wishlist', 'WishlistController', ['except' => ['create', 'edit', 'show', 'update']]);
 // // ruta perfil
 // Route::get('/perfil', function () {
 //     return view('');
@@ -62,3 +62,7 @@ Route::get('/faq', function () {
 // Route::get('/carrito', function () {
 //     return view('');
 // });
+//
+// Auth::routes();
+//
+// Route::get('/home', 'HomeController@index')->name('home');

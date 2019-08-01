@@ -13,19 +13,29 @@
        <img src="./img/logo-diy.png" alt="" class="logo">
      </div>
      <div class="col-4 text-right">
+
+       @guest
        <a href="{{url('/login')}}" class="user">
          <i class="fa fa-user pr-3"></i></a>
-         <a class="dropdown-item" href="{{ route('logout') }}"
+       @endguest
+
+         @auth
+         <a class="user" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
-             {{ __('Logout') }}
+          <i class="fa fa-user-slash pr-3"></i>
          </a>
 
          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
              @csrf
          </form>
-       <span class="icons-separator"></span>
-       <i class="fa fa-shopping-cart pl-3"></i>
+         <a href="{{url('/wishlist')}}" class="user">
+         <span class="icons-separator"></span>
+         <i class="fa fa-shopping-cart pl-3"></i>
+         </a>
+         @endauth
+
+
      </div>
    </div>
   </div>
