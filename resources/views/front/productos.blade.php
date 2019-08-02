@@ -17,6 +17,7 @@
                      <div style= "background-color: #efe4d5; align-content: center;" class="card-body">
                            <h5 style= "color: #bfb29f; text-align: center;" class="card-title"><?= $producto["nombre"] ?></h5>
                          <p class="card-text"><small class="text-muted"><?= $producto["ref"] ?></small></p>
+                         <p class="card-text"><small class="text-muted"><?= $producto["categoria"] ?></small></p>
                          <!-- <strong style="color: red"><?= $producto["precio"] ?></strong> -->
                      </div>
                      <a href="/producto/<?= $producto["id"] ?>" class="btn btn-newsletter">

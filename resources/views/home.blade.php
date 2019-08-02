@@ -20,4 +20,7 @@
         </div>
     </div>
 </div>
+
+          <script src="/js/fetch.js"></script>
+
 @endsection

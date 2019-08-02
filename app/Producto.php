@@ -13,7 +13,7 @@ class Producto extends Model
    * @var array
    */
   protected $fillable = [
-        'imagen', 'nombre', 'precio','ref'
+        'imagen', 'nombre', 'precio','ref', 'categoria',
   ];
 
   public function wishlist(){
