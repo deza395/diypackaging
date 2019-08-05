@@ -4,8 +4,26 @@
 
 	@section ('mainContent')
   @if (Auth::user())
-    @foreach ($wishlists as $wishlist)
-      <p>{{$wishlist->product->nombre}}</p>
+
+<div class="sellers sellers-prod">
+	<div class="row mx-0">
+ 	 <div class="card-deck">
+ 		   @foreach ($wishlists as $wishlist)
+ 				 <div class="card" data-card-product= "{{$wishlist->product->nombre}}">
+ 					 <img  src="/img/productos/{{$wishlist->product->imagen}}" width="100%"  height="250px">
+ 					 <div style= "background-color: #efe4d5; align-content: center;" class="card-body">
+ 								 <h5 style= "color: #bfb29f; text-align: center;" class="card-title">{{$wishlist->product->nombre}}</h5>
+ 								 <p class="card-text"><small class="text-muted"><b>Código:</b>{{$wishlist->product->ref}}</small></p>
+ 								 <p class="card-text"><small class="text-muted"><b>Categoría:</b> {{$wishlist->product->categoria}} </small></p>
+ 					 </div>
+ 					 <a href="/producto/{{$wishlist->product->id}}" class="btn btn-newsletter">
+ 						Ver Producto
+ 					 </a>
+ 				 </div>
+ 				 @endforeach
+ 	 </div>
+  </div>
+
       <a href="#" class="btn btn-newsletter"
       onclick="event.preventDefault();
                     document.getElementById('wishlist_remove_form').submit();">Quitar de la wishlist</a>
@@ -15,7 +33,8 @@
        <input type="hidden" name="_method" value="delete" />
        <input name="whishlist_id" type="text" value="{{$wishlist->id}}" hidden />
      </form>
-    @endforeach
+</div>
+
   @endif
 
 

@@ -101,8 +101,14 @@
     </div>
     @else
     <div class="">
-      No es admin
+      <div class="card bg-transparent">
+        <div class="p-4">
+          <h4>Bienvenido a DIY - Packaging</h4>
+          <a href="/wishlist">Quiero ver mi  wishlist</a>
+        </div>
+      </div>
     </div>
+
     @endif
 
   </div>

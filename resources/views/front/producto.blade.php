@@ -6,7 +6,7 @@
 @section ('mainContent')
     <!-- Inicio de productos -->
 
-      <h4>Nuestros productos</h4>
+      <h4>Detalle del producto</h4>
       <div class="sellers sellers-prod">
 
            <div class="row mx-0">

@@ -83,6 +83,7 @@ class RegisterController extends Controller
             'avatar'=> $profileImageName,
             'provincia' => $data['provincia'],
             'email' => $data['email'],
+            'isAdmin' => 0,
         ]);
     }
 }
