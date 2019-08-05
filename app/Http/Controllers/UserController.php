@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Auth;
+use App\Producto;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,6 +25,29 @@ class UserController extends Controller
       return view ('userviews.userprofile');
     }
       return view ('front.perfil');
+    }
+
+    /**
+    * Adds a product to the DB
+    */
+
+    public function addProduct(Request $request){
+
+      // $productImage = $request->file('imagen');
+      // $productImageName = uniqid('img-') . '.' . $productImage->extension();
+      // $productImage->storePubliclyAs("public/img/productos", $productImageName);
+
+      $productImage = 'testUrlTrucha.jpg';
+
+      return Producto::create([
+          'nombre' => $request['nombre'],
+          'precio' => $request['precio'],
+          'ref' => $request['ref'],
+          'imagen'=> $productImage,
+          'categoria' => $request['categoria'],
+      ]);
+
+      return redirect('/perfil');
     }
 
     /**

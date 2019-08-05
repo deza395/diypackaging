@@ -174,7 +174,10 @@ footer {
 /*Productos */
 
 .sellers-prod .card {
-  flex: 1 0 20%;
+  flex: 0 0 22%;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: none;
 }
 .card-body {
  color: #bfb29f;

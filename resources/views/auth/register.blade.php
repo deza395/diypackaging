@@ -47,7 +47,8 @@
 					</span>
 					@enderror
 				</label>
-				<label class="campo-formulario">
+
+			<label class="campo-formulario" id="label-provincias">
 			<select
 			class="form-control @error('pais') is-invalid @enderror"
 			name="pais"
@@ -61,9 +62,7 @@
 		</span>
 		@enderror
 	</label>
-
-	<div class="" style="display: none;">
-		<label for="provincia" class="campo-formulario">
+		<label for="provincia" class="campo-formulario" style="display: none;">
 			<select
 			class="form-control @error('provincia') is-invalid @enderror"
 			name="provincia"
@@ -78,7 +77,6 @@
 		</span>
 		@enderror
 	</label>
-</div>
 
 <label class="campo-formulario">
 	<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password"placeholder="Contraseña">
@@ -111,4 +109,5 @@
 
 
 <script src="/js/fetch.js"></script>
+<script src="/js/formValidation.js"></script>
 @endsection

@@ -28,6 +28,7 @@ Route::get('/testdb/{id}', 'DbController@index');
 
 
 Route::get('/perfil', 'UserController@showProfile');
+Route::post('/perfil', 'UserController@addProduct');
 
 Route::get('/somos',function (){
   return view ('front.somos');
@@ -36,9 +37,14 @@ Route::get('/somos',function (){
 
 // ruta productos
 Route::get('/productos', 'ProductosController@getAll');
+Route::get('/productos/{categoria}', 'ProductosController@getByCategory');
 
  // ruta productos
  Route::get('/producto/{id}', 'ProductosController@getById');
+ Route::post('/producto/delete/{id}', 'ProductosController@destroy');
+ Route::get('/producto/editar/{id}', 'ProductosController@edit');
+ Route::post('/producto/editar/{id}', 'ProductosController@update');
+
 
 // // ruta diseños
 // Route::get('/personalizados', function () {

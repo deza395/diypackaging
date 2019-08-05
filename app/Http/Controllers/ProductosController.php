@@ -28,6 +28,12 @@ class ProductosController extends Controller
       return view ('front.productos',compact('productos'));
     }
 
+    public function getByCategory($categoria)
+    {
+        $productos = Producto::where('categoria',$categoria)->get();
+        return view ('front.productos',compact('productos'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -66,9 +72,11 @@ class ProductosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         //
+        $producto = Producto::findOrFail($id);
+        return view ('front.edit-producto',compact('producto'));
     }
 
     /**
@@ -81,6 +89,15 @@ class ProductosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $producto = Producto::findOrFail($id);
+
+        $producto->nombre = $request['nombre'];
+        $producto->ref = $request['ref'];
+        $producto->precio = $request['precio'];
+        $producto->categoria = $request['categoria'];
+
+        $producto->save();
+        return redirect('/producto/'.$id);
     }
 
     /**
@@ -91,6 +108,10 @@ class ProductosController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $producto = Producto::findOrFail($id);
+      $producto->delete();
+
+      $productos = Producto::all();
+      return redirect ('/productos');
     }
 }

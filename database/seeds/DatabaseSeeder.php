@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      $users = factory(App\User::class,25)->create();
+      $users = factory(App\User::class,10)->create();
       $products =  factory(App\Producto::class, 20)->create();
+      $whishlists =  factory(App\Wishlist::class, 30)->create();
     }
 }

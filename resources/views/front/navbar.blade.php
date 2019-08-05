@@ -15,24 +15,21 @@
       <li class="nav-item">
         <a class="nav-link" href="/somos">¿Quiénes Somos?</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/productos">Productos<span class="sr-only">(current)</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Productos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown">
+          <a class="dropdown-item" href="/productos/Caja">Cajas</a>
+          <a class="dropdown-item" href="/productos/Bolsa">Bolsas</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/productos">Todos</a>
+        </div>
       </li>
-
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="personalizado.php" target="_blank">Diseño personalizado</a>
-      </li>-->
-
       <li class="nav-item">
         <a class="nav-link" href="/faq">Preguntas frecuentes</a>
       </li>
     </ul>
-    <form class="form-inline">
-      <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-      <button class="btn btn-search" type="submit">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
   </div>
 </nav>
 <!-- Fin del NAVBAR -->
