@@ -13,6 +13,8 @@
         <p>Hola, <b>{{Auth::user()->nombre}}!</b></p>
         <p>Tu email es <b>{{Auth::user()->email}}</b></p>
         <p>Tu usuario es  <b>{{Auth::user()->username}}</b></p>
+
+        <img src="/storage/avatars/{{Auth::user()->avatar}}" alt="" width="300px">
       </div>
 
     </div>

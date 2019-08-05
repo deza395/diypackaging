@@ -7,6 +7,7 @@ use App\Wishlist;
 
 class Producto extends Model
 {
+  protected $table = "products";
   /**
    * The attributes that are mass assignable.
    *
