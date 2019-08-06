@@ -17,7 +17,7 @@
 				<h2>Registrarse </h2>
 
 				<label class="campo-formulario">
-					<input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" autocomplete="nombre" autofocus placeholder="Nombre">
+					<input id="name" type="text" class="form-control @error('nombre') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="nombre" autofocus placeholder="Nombre">
 
 					@error('nombre')
 					<span class="invalid-feedback" role="alert">
@@ -50,9 +50,9 @@
 
 			<label class="campo-formulario" id="label-provincias">
 			<select
-			class="form-control @error('pais') is-invalid @enderror"
-			name="pais"
-			id="pais"
+			class="form-control @error('country') is-invalid @enderror"
+			name="country"
+			id="country"
 			>
 			<option value="">Elegí un país</option>
 		</select>
@@ -64,14 +64,14 @@
 	</label>
 		<label for="provincia" class="campo-formulario" style="display: none;">
 			<select
-			class="form-control @error('provincia') is-invalid @enderror"
-			name="provincia"
-			id="provincia"
+			class="form-control @error('city') is-invalid @enderror"
+			name="city"
+			id="city"
 			>
 			<option value="">Elegí una provincia</option>
 		</select>
 
-		@error('provincia')
+		@error('city')
 		<span class="invalid-feedback" role="alert">
 			<strong>{{ $message }}</strong>
 		</span>

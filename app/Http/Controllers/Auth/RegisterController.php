@@ -50,10 +50,10 @@ class RegisterController extends Controller
     {
 
         return Validator::make($data, [
-            'nombre' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'username'=> ['required', 'string', 'max:255'],
             'password' => ['required', 'min:8', 'confirmed', 'regex:/DH/'],
-            'pais'=> ['required', 'string', 'max:255'],
+            'country'=> ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
           ],
           [
@@ -79,12 +79,12 @@ class RegisterController extends Controller
      $profileImage->storePubliclyAs("/public/avatars", $profileImageName);
 
         return User::create([
-            'nombre' => $data['nombre'],
+            'name' => $data['name'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
-            'pais' => $data['pais'],
+            'country' => $data['country'],
             'avatar'=> $profileImageName,
-            'provincia' => $data['provincia'],
+            'city' => $data['city'],
             'email' => $data['email'],
             'isAdmin' => 0,
         ]);

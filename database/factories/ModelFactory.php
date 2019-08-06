@@ -2,7 +2,7 @@
 <?php
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
-use App\Producto;
+use App\Product;
 use App\Wishlist;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -20,10 +20,10 @@ use Faker\Generator as Faker;
 $factory->define(App\User::class, function (Faker $faker) {
     static $password;
     return [
-        'nombre' => $faker->name,
+        'name' => $faker->name,
         'username' => $faker->userName,
         'password' => $password ?: $password = Hash::make('DH123456'),
-        'pais' => $faker->country,
+        'country' => $faker->country,
         'avatar' => $faker->randomElement($array = array ('foto1.png','foto2.png')),
         'email' => $faker->unique()->freeEmail,
         'created_at' => $faker->dateTimeThisMonth($max = 'now'),
@@ -32,13 +32,13 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Producto::class, function (Faker $faker) {
+$factory->define(App\Product::class, function (Faker $faker) {
     return [
-        'nombre' => $faker->domainWord,
-        'precio' => $faker->numberBetween($min = 150, $max = 300),
+        'name' => $faker->domainWord,
+        'price' => $faker->numberBetween($min = 150, $max = 300),
         'ref' => $faker->swiftBicNumber,
-        'imagen' => $faker->randomElement($array = array ('bolsa_barbara.jpeg','bolsa_espuma.jpeg','bolsa_pasioneria.jpeg','caja_ajuar.jpg','caja_crocante.jpeg','caja_fragil.jpeg')),
-        'categoria' => $faker->randomElement($array = array ('Bolsa','Caja')),
+        'image' => $faker->randomElement($array = array ('bolsa_barbara.jpeg','bolsa_espuma.jpeg','bolsa_pasioneria.jpeg','caja_ajuar.jpg','caja_crocante.jpeg','caja_fragil.jpeg')),
+        'category' => $faker->randomElement($array = array ('Bolsa','Caja')),
         'created_at' => $faker->dateTimeThisMonth($max = 'now'),
         'updated_at' => $faker->dateTimeThisMonth($max = 'now'),
     ];

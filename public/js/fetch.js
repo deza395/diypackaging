@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
-	var selectPaises = document.querySelector('#pais');
-	var selectProvincias = document.querySelector('#provincia');
+	var selectPaises = document.querySelector('#country');
+	var selectProvincias = document.querySelector('#city');
 	var contenedorProvincias = selectProvincias.parentElement;
 
 	fetch('https://restcountries.eu/rest/v2/all')

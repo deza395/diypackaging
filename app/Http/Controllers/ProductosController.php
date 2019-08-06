@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Auth;
 
-use App\Producto;
+use App\Product;
 
 class ProductosController extends Controller
 {
@@ -18,19 +18,19 @@ class ProductosController extends Controller
      */
     public function getById($id)
     {
-        $producto = Producto::find($id);
+        $producto = Product::find($id);
         return view ('front.producto',compact('producto'));
     }
 
     public function getAll()
     {
-      $productos = Producto::all();
+      $productos = Product::all();
       return view ('front.productos',compact('productos'));
     }
 
-    public function getByCategory($categoria)
+    public function getByCategory($category)
     {
-        $productos = Producto::where('categoria',$categoria)->get();
+        $productos = Product::where('category',$category)->get();
         return view ('front.productos',compact('productos'));
     }
 
@@ -75,7 +75,7 @@ class ProductosController extends Controller
     public function edit(Request $request, $id)
     {
         //
-        $producto = Producto::findOrFail($id);
+        $producto = Product::findOrFail($id);
         return view ('front.edit-producto',compact('producto'));
     }
 
@@ -89,12 +89,12 @@ class ProductosController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $producto = Producto::findOrFail($id);
+        $producto = Product::findOrFail($id);
 
-        $producto->nombre = $request['nombre'];
+        $producto->name = $request['name'];
         $producto->ref = $request['ref'];
-        $producto->precio = $request['precio'];
-        $producto->categoria = $request['categoria'];
+        $producto->price = $request['price'];
+        $producto->category = $request['category'];
 
         $producto->save();
         return redirect('/producto/'.$id);
@@ -108,10 +108,10 @@ class ProductosController extends Controller
      */
     public function destroy($id)
     {
-      $producto = Producto::findOrFail($id);
+      $producto = Product::findOrFail($id);
       $producto->delete();
 
-      $productos = Producto::all();
+      $productos = Product::all();
       return redirect ('/productos');
     }
 }

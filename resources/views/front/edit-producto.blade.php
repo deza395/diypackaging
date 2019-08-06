@@ -15,14 +15,14 @@
                      @if (Auth::user()->isAdmin)
                      <form action="/producto/editar/<?= $producto["id"] ?>" id="update_item_form" method="POST">
                        @csrf
-                    <img  src="/img/productos/<?= $producto["imagen"] ?>" width="100%"  height="250px">
+                    <img  src="/img/productos/<?= $producto["image"] ?>" width="100%"  height="250px">
                      <div style= "background-color: #efe4d5; align-content: center;" class="card-body">
                          <label class="card-text">
                            Nombre
                              <input
                               type="text"
-                              name="nombre"
-                              value="{{ old('nombre', $producto->nombre) }}"
+                              name="name"
+                              value="{{ old('name', $producto->name) }}"
                               class="form-control"
                             >
                          </label>
@@ -30,8 +30,8 @@
                            Precio en pesos
                              <input
                   						type="text"
-                  						name="precio"
-                  						value="{{ old('precio', $producto->precio) }}"
+                  						name="price"
+                  						value="{{ old('price', $producto->price) }}"
                   						class="form-control"
                   					>
                          </label>
@@ -46,9 +46,9 @@
                          </label>
                          <label class="card-text">
                            Categoría
-                           <select class="form-control" name="categoria">
-                              <option value="Caja" <?= $producto["categoria"] === 'Caja' ? 'selected' : ''?> >Caja</option>
-                              <option value="Bolsa" <?= $producto["categoria"] === 'Bolsa' ? 'selected' : ''?>>Bolsa</option>
+                           <select class="form-control" name="category">
+                              <option value="Caja" <?= $producto["category"] === 'Caja' ? 'selected' : ''?> >Caja</option>
+                              <option value="Bolsa" <?= $producto["category"] === 'Bolsa' ? 'selected' : ''?>>Bolsa</option>
                            </select>
                          </label>
                      </div>

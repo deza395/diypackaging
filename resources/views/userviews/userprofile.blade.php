@@ -10,7 +10,7 @@
   <div class="col-sm-4">
     <div class="card bg-transparent">
       <div class="p-4">
-        <p>Hola, <b>{{Auth::user()->nombre}}!</b></p>
+        <p>Hola, <b>{{Auth::user()->name}}!</b></p>
         <p>Tu email es <b>{{Auth::user()->email}}</b></p>
         <p>Tu usuario es  <b>{{Auth::user()->username}}</b></p>
 
@@ -28,27 +28,27 @@
           <h4>Cargar Productos</h4>
           <form class="" action="{{url('/perfil')}}" method="POST">
             @csrf
-            <label class="campo-formulario d-block" for="nombre">
+            <label class="campo-formulario d-block" for="name">
               <input
               type="text"
-              name="nombre"
-              class="form-control @error('nombre') is-invalid @enderror"
-              value="{{old('nombre')}}"
+              name="name"
+              class="form-control @error('name') is-invalid @enderror"
+              value="{{old('name')}}"
               placeholder="Nombre del producto">
-              @error('nombre')
+              @error('name')
     					<span class="invalid-feedback" role="alert">
     						<strong>{{ $message }}</strong>
     					</span>
     					@enderror
             </label>
-            <label class="campo-formulario d-block" for="precio">
+            <label class="campo-formulario d-block" for="price">
               <input
               type="text"
-              name="precio"
-              class="form-control @error('precio') is-invalid @enderror"
-              value="{{old('precio')}}"
+              name="price"
+              class="form-control @error('price') is-invalid @enderror"
+              value="{{old('price')}}"
               placeholder="Precio del producto">
-              @error('precio')
+              @error('price')
     					<span class="invalid-feedback" role="alert">
     						<strong>{{ $message }}</strong>
     					</span>
@@ -67,27 +67,27 @@
               </span>
               @enderror
             </label>
-            <label class="campo-formulario" for="imagen">
+            <label class="campo-formulario" for="image">
               <input
               type="file"
-              name="imagen"
-              class="form-control @error('imagen') is-invalid @enderror"
-              value="{{old('imagen')}}"
+              name="image"
+              class="form-control @error('image') is-invalid @enderror"
+              value="{{old('image')}}"
               >
-              @error('imagen')
+              @error('image')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
               </span>
               @enderror
             </label>
-            <label class="campo-formulario d-block" for="categoria">
+            <label class="campo-formulario d-block" for="category">
               <input
               type="text"
-              name="categoria"
-              class="form-control @error('categoria') is-invalid @enderror"
-              value="{{old('categoria')}}"
+              name="category"
+              class="form-control @error('category') is-invalid @enderror"
+              value="{{old('category')}}"
               placeholder="Categoria del producto">
-              @error('categoria')
+              @error('category')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
               </span>

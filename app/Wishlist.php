@@ -13,6 +13,6 @@ public function user(){
 }
 
 public function product(){
-  return $this->belongsTo(Producto::class);
+  return $this->belongsTo(Product::class);
 }
 }

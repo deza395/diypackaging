@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Auth;
-use App\Producto;
+use App\Product;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -39,12 +39,12 @@ class UserController extends Controller
 
       $productImage = 'testUrlTrucha.jpg';
 
-      return Producto::create([
-          'nombre' => $request['nombre'],
-          'precio' => $request['precio'],
+      return Product::create([
+          'name' => $request['name'],
+          'price' => $request['price'],
           'ref' => $request['ref'],
-          'imagen'=> $productImage,
-          'categoria' => $request['categoria'],
+          'image'=> $productImage,
+          'category' => $request['category'],
       ]);
 
       return redirect('/perfil');
