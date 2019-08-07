@@ -23,7 +23,9 @@ class WishlistController extends Controller
     {
       $user = Auth::user();
       $wishlists = Wishlist::where("user_id", "=", $user->id)->orderby('id', 'desc')->paginate(10);
-      return view('front.wishlist', compact('user', 'wishlists'));
+
+          return view('front.wishlist', compact('wishlists'));
+
     }
 
     public function store(Request $request)
@@ -107,11 +109,17 @@ class WishlistController extends Controller
      */
      public function destroy($id)
      {
-       $wishlist = Wishlist::findOrFail($id);
+       /** $wishlist busca una wishlist por $id
+       *   BORRA la wishlist que encontro con ese id
+       */
+       $wishlist = Wishlist::find($id);
        $wishlist->delete();
-
-       return view ('front.index')
-           ->with('flash_message',
-            'Item eliminado correctamente');
+       /** Guardo en $user rl usuario logeado que me da la clase Auth
+       *   Busco las wishlists del usuario logeado actualizada despues de Borrar
+       *   Lo mando de nuevo a la vista de wishlists ahora sin el producto que borro
+        */
+       $user = Auth::user();
+       $wishlists = Wishlist::where("user_id", "=", $user->id)->orderby('id', 'desc')->paginate(10);
+       return view('front.wishlist', compact('wishlists'));
      }
 }
