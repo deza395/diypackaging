@@ -1,7 +1,8 @@
 
 
-<link rel="stylesheet" href="css/home.css">
-<!-- <link rel="stylesheet" href="css/header.css"> -->
+
+
+
 <header>
   <div class="topbar">
    <div class="row">
@@ -10,7 +11,8 @@
        +4234234234
      </div>
      <div class="col-4 text-center">
-       <img src="./img/logo-diy.png" alt="" class="logo">
+       <img id="logo"src="./img/logo-diy.png" alt="" class="logo">
+
      </div>
      <div class="col-4 text-right">
 
@@ -36,9 +38,9 @@
          <i class="fa fa-shopping-cart pl-3"></i>
          </a>
          @endauth
-
-
+        <button id='btn-style' type="button" class="botoncito"></button>
      </div>
    </div>
   </div>
+
 </header>
