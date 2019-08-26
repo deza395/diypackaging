@@ -28,6 +28,7 @@
                      onclick="event.preventDefault();
                                    document.getElementById('wishlist_form').submit();">Agregar a wishlist</a>
 
+                    @auth
                      <form action="{{route('wishlist.store')}}" id="wishlist_form" method="POST">
                       @csrf
                       <input name="user_id" type="text" value="{{Auth::user()->id}}" hidden />
@@ -41,6 +42,8 @@
                      <a href="/producto/editar/<?= $producto["id"]?>" name="edit" class="btn btn-newsletter">Editar</a>
                     </form>
                    @endif
+                    @endauth
+
                    </div>
              </div>
            </div>

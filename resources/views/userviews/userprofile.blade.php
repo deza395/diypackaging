@@ -26,7 +26,7 @@
       <div class="card bg-transparent">
         <div class="p-4">
           <h4>Cargar Productos</h4>
-          <form class="" action="{{url('/perfil')}}" method="POST">
+          <form class="" action="{{ route('perfil') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <label class="campo-formulario d-block" for="name">
               <input

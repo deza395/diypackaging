@@ -33,20 +33,19 @@ class UserController extends Controller
 
     public function addProduct(Request $request){
 
-      // $productImage = $request->file('imagen');
-      // $productImageName = uniqid('img-') . '.' . $productImage->extension();
-      // $productImage->storePubliclyAs("public/img/productos", $productImageName);
+      $productImage = $request->file('image');
+      $productImageName = uniqid('img-') . '.' . $productImage->extension();
+      $productImage->storePubliclyAs("public/productos", $productImageName);
 
-      $productImage = 'testUrlTrucha.jpg';
+    //  $productImage = 'testUrlTrucha.jpg';
 
-      return Product::create([
-          'name' => $request['name'],
-          'price' => $request['price'],
-          'ref' => $request['ref'],
-          'image'=> $productImage,
-          'category' => $request['category'],
-      ]);
-
+      $producto = new Product();
+      $producto->name = $request['name'];
+      $producto->price = $request['price'];
+      $producto->ref = $request['ref'];
+      $producto->image = $productImageName;
+      $producto->category = $request['category'];
+      $producto->save();
       return redirect('/perfil');
     }
 

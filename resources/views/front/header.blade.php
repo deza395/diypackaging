@@ -11,7 +11,7 @@
        +4234234234
      </div>
      <div class="col-4 text-center">
-       <img id="logo"src="./img/logo-diy.png" alt="" class="logo">
+       <img id="logo"src="/img/logo-diy.png" alt="" class="logo">
 
      </div>
      <div class="col-4 text-right">
