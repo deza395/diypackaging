@@ -1,4 +1,4 @@
- @include('front.lista_productos')
+++6599 @include('front.lista_productos')
 @extends('front.template')
 
 @section('pageTitle', 'productos')
@@ -51,6 +51,15 @@
                               <option value="Bolsa" <?= $producto["category"] === 'Bolsa' ? 'selected' : ''?>>Bolsa</option>
                            </select>
                          </label>
+                         <label class="card-text">
+                         Subcategoría
+                         <select class="form-control" name="subcategory">
+                            <option value="Liso" <?= $producto["subcategory"] === 'Liso' ? 'selected' : ''?> >Liso</option>
+                            <option value="Estampado" <?= $producto["subcategory"] === 'Estampado' ? 'selected' : ''?>>Estampado</option>
+                            <option value="Grande" <?= $producto["subcategory"] === 'Grande' ? 'selected' : ''?> >Grande</option>
+                            <option value="Chica" <?= $producto["subcategory"] === 'Chica' ? 'selected' : ''?>>Chica</option>
+                         </select>
+                       </label>
                      </div>
                      <input type="submit" name="update" value="Guardar cambios" class="btn btn-newsletter">
 

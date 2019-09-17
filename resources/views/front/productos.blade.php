@@ -19,7 +19,9 @@
                      <div style= "background-color: #efe4d5; align-content: center;" class="card-body">
                            <h5 style= "color: #bfb29f; text-align: center;" class="card-title"><?= $producto["name"] ?></h5>
                            <p class="card-text"><small class="text-muted"><b>Código:</b> <?= $producto["ref"] ?></small></p>
-                           <p class="card-text"><small class="text-muted"><b>Categoría:</b> <?= $producto["category"] ?></small></p>
+                           <p class="card-text"><small class="text-muted"><b>Categoría:</b> <a href="/productos/<?= $producto["category"] ?>"><?= $producto["category"] ?></small></a></p>
+
+                            <p class="card-text"><small class="text-muted"><b>Subcategoría:</b> <a href="/productos/<?= $producto["category"]?>/<?= $producto['subcategory'] ?>"><?= $producto["subcategory"] ?></small></a></p>
                      </div>
                      <a href="/producto/<?= $producto["id"] ?>" class="btn btn-newsletter">
                       Ver Producto

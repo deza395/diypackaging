@@ -38,6 +38,7 @@ Route::get('/somos',function (){
 // ruta productos
 Route::get('/productos', 'ProductosController@getAll');
 Route::get('/productos/{categoria}', 'ProductosController@getByCategory');
+Route::get('/productos/{categoria}/{subcategoria}', 'ProductosController@getByCategorySubCategoria');
 
  // ruta productos
  Route::get('/producto/{id}', 'ProductosController@getById');

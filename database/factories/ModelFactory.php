@@ -39,6 +39,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'ref' => $faker->swiftBicNumber,
         'image' => $faker->randomElement($array = array ('bolsa_barbara.jpeg','bolsa_espuma.jpeg','bolsa_pasioneria.jpeg','caja_ajuar.jpg','caja_crocante.jpeg','caja_fragil.jpeg')),
         'category' => $faker->randomElement($array = array ('Bolsa','Caja')),
+        'subcategory' => $faker->randomElement($array = array ('Liso','Estampado','Grande','Chica')),
         'created_at' => $faker->dateTimeThisMonth($max = 'now'),
         'updated_at' => $faker->dateTimeThisMonth($max = 'now'),
     ];

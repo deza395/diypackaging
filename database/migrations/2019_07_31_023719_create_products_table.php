@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('ref');
             $table->string('image');
             $table->string('category');
+            $table->string('subcategory');
             $table->timestamps();
         });
 

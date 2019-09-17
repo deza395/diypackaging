@@ -16,12 +16,21 @@
         <a class="nav-link" href="/somos">¿Quiénes Somos?</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <a class="nav-link dropdown-toggle" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseover="mouseProd()">
           Productos
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdown">
-          <a class="dropdown-item" href="/productos/Caja">Cajas</a>
-          <a class="dropdown-item" href="/productos/Bolsa">Bolsas</a>
+          <a class="dropdown-item" href="/productos/Caja" onmouseover="mouseSub('sub1','sub2')">Cajas</a>
+         <div style="margin-left: 15px; display: none" id="sub1">
+           <a class="dropdown-item" href="/productos/Caja/liso">Liso</a>
+           <a class="dropdown-item" href="/productos/Caja/estampado">Estampado</a>
+         </div>
+
+         <a class="dropdown-item" href="/productos/Bolsa" onmouseover="mouseSub('sub2','sub1')">Bolsas</a>
+         <div style="margin-left: 15px; display: none" id="sub2">
+             <a class="dropdown-item" href="/productos/Bolsa/Grande">Grande</a>
+             <a class="dropdown-item" href="/productos/Bolsa/Chica">Chica</a>
+         </div>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="/productos">Todos</a>
         </div>
@@ -31,5 +40,25 @@
       </li>
     </ul>
   </div>
+  <script>
+    window.onload = function() {
+      if (window.innerWidth < 992) {
+        document.getElementById('sub1').style.display = 'block';
+        document.getElementById('sub2').style.display = 'block';
+      }
+    }
+    function mouseSub(divUno, divDos){
+      if (window.innerWidth > 991) {
+        document.getElementById(divUno).style.display = 'block';
+        document.getElementById(divDos).style.display = 'none';
+      }
+    }
+    function mouseProd(){
+      if (window.innerWidth > 991) {
+        document.getElementById('sub1').style.display='none';
+        document.getElementById('sub2').style.display='none';
+      }
+    }
+  </script>
 </nav>
 <!-- Fin del NAVBAR -->

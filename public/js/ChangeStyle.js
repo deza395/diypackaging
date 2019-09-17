@@ -15,10 +15,10 @@ window.addEventListener('load', function () {
                 cssStyles.setAttribute('href', '/css/change.css');
             }
 
-            if (styleLogo.getAttribute('src') == './img/logo-diy2.png') {
-                styleLogo.setAttribute('src', './img/logo-diy.png');
+            if (styleLogo.getAttribute('src') == '/img/logo-diy2.png') {
+                styleLogo.setAttribute('src', '/img/logo-diy.png');
             } else {
-              styleLogo.setAttribute('src', './img/logo-diy2.png');
+              styleLogo.setAttribute('src', '/img/logo-diy2.png');
                         }
 
 

@@ -1,6 +1,6 @@
 
 
-
+<!-- poner undesplegable y buscar lo sigiuente, si esta logueado mostrarle que vaya a su perfil o salga y si no esta logueado mostrarle registrarse y loguarse -->
 
 
 <header>
@@ -35,6 +35,7 @@
          </form>
          <a href="{{url('/wishlist')}}" class="user">
          <span class="icons-separator"></span>
+         <!-- ni el carro ni el botoncito tienen cuanto van a ocupar  -->
          <i class="fa fa-shopping-cart pl-3"></i>
          </a>
          @endauth

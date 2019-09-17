@@ -34,6 +34,12 @@ class ProductosController extends Controller
         return view ('front.productos',compact('productos'));
     }
 
+   public function getByCategorySubCategoria($category,$subcategoria)
+   {
+       $productos = Product::where('category',$category)->where('subcategory',$subcategoria)->get();
+       return view ('front.productos',compact('productos'));
+   }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,7 +58,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**
@@ -95,6 +101,7 @@ class ProductosController extends Controller
         $producto->ref = $request['ref'];
         $producto->price = $request['price'];
         $producto->category = $request['category'];
+        $producto->subcategory = $request['subcategory'];
 
         $producto->save();
         return redirect('/producto/'.$id);

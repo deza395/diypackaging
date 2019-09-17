@@ -4,6 +4,7 @@
 
 
         @section ('mainContent')
+        <link href="/css/lightbox.css" rel="stylesheet" />
 
         <!-- Inicio del CAROUSEL -->
           <!-- Ver clases de bootstrap para el Carousel https://getbootstrap.com/docs/4.0/components/carousel/#with-controls -->
@@ -90,22 +91,22 @@
           <!-- Fila con productos (Sólo imagen) -->
           <div class="row">
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img1.jpg" alt="">
+                <a href="/img/destacados/img1.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img1.jpg" /></a>
             </div>
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img2.jpg" alt="">
+              <a href="/img/destacados/img2.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img2.jpg" /></a>
             </div>
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img3.jpg" alt="">
+                <a href="/img/destacados/img3.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img3.jpg" /></a>
             </div>
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img4.jpg" alt="">
+              <a href="/img/destacados/img4.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img4.jpg" /></a>
             </div>
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img1.jpg" alt="">
+                <a href="/img/destacados/img1.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img1.jpg" /></a>
             </div>
             <div class="col-6 col-md-4 destacados-product">
-              <img src="/img/destacados/img2.jpg" alt="">
+                <a href="/img/destacados/img4.jpg" data-lightbox="image-4" data-title=""><img src="/img/destacados/img4.jpg" /></a>
             </div>
           </div>
 
@@ -116,24 +117,25 @@
           <h4>Ideas</h4>
           <div class="row">
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img2.jpg" alt="" class="img-fluid">
+              <a href="/img/ideas/img1.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img1.jpg" class="img-fluid"/></a>
             </div>
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img3.jpg" alt="" class="img-fluid">
+              <a href="/img/ideas/img3.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img3.jpg" class="img-fluid"/></a>
             </div>
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img1.jpg" alt="" class="img-fluid">
+              <a href="/img/ideas/img2.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img2.jpg" class="img-fluid"/></a>
             </div>
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img3.jpg" alt="" class="img-fluid">
+            <a href="/img/ideas/img3.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img3.jpg" class="img-fluid"/></a>
             </div>
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img1.jpg" alt="" class="img-fluid">
+            <a href="/img/ideas/img1.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img1.jpg" class="img-fluid"/></a>
             </div>
             <div class="col-4 col-sm-2 ideas-product">
-              <img src="/img/ideas/img2.jpg" alt="" class="img-fluid">
+            <a href="/img/ideas/img2.jpg" data-lightbox="image-3" data-title= ><img src="/img/ideas/img2.jpg" class="img-fluid"/></a>
             </div>
           </div>
         </div>
         <!-- Fin de IDEAS -->
+        <script src="/js/lightbox-plus-jquery.js"></script>
     @endsection
