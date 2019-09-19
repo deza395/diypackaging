@@ -14,7 +14,7 @@ class Product extends Model
    * @var array
    */
   protected $fillable = [
-        'image', 'name', 'price','ref', 'category',
+        'image', 'name', 'price','ref', 'category', 'subcategory',
   ];
 
   public function wishlist(){
