@@ -30,4 +30,8 @@ window.addEventListener('load', function () {
      cssStyles.setAttribute('href', localStorage.getItem('cssCookie'));
       styleLogo.setAttribute('src', localStorage.getItem('logoCookie'));
 
+    // pop up de la wishlist
+
+
+
 });
