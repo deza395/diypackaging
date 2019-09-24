@@ -54,7 +54,7 @@
 					@enderror
 				</label>
 
-			<label class="campo-formulario" id="label-provincias">
+			<label class="campo-formulario" id="label-paises">
 			<select
 			class="form-control @error('country') is-invalid @enderror"
 			name="country"
@@ -103,7 +103,7 @@
 </label>
 
 <label class="campo-formulario">
-	<input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password" placeholder="Confirme contraseña">
+	<input id="password_confirmation" type="password" class="form-control" name="password_confirmation" autocomplete="new-password" placeholder="Confirme contraseña">
 	<div class="invalid-feedback">
 		Aquí va el error del Título
 	</div>
