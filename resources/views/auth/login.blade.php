@@ -51,14 +51,14 @@
 
 
 	<!-- boton de recordarme -->
-	 <div class="form-group row">
+	 <!-- <div class="form-group row">
 	<div class="col-12 ">
 	 <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 	 <label class="form-check-label" for="remember">
 	 			Recordarme
 	 </label>
 	 </div>
-	 </div>
+	 </div> -->
 	<!-- Fin boton de recordarme -->
 
 	 </form>

@@ -62,6 +62,10 @@ h3, h4 {
 /* Centro hamburguesa */
 .navbar-toggler {
   margin: 0 auto;
+  color: white;
+}
+.nav-item a{
+  color:black !important;
 }
 
 .btn-search {
@@ -135,7 +139,7 @@ h5 {
   color: #fff;
 }
 
-.btn-newsletter:hover {
+.btn-newsletter:hover  {
   background-color: #fff;
   border: 1px solid #bfb29f;
   color: #bfb29f;
@@ -325,13 +329,17 @@ footer {
 	font-size: 20px;
 	margin: 30px auto;
 }
-
+.boton:hover  {
+  background-color: #fff;
+  border: 1px solid #bfb29f;
+  color: #bfb29f;
+}
 /* botoncito para caambiar el tema  */
 .botoncito {
 	width: 20px;
 	height: 20px;
   border-color: grey;
-	border-radius: 2px;
+	border-radius: 180px;
   background-color:black ;
 }
 /* .card :hover{

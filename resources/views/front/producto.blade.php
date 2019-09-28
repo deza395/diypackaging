@@ -11,7 +11,7 @@
 
            <div class="row" >
              <div class="card-deck">
-                   <div class="card mx-auto" >
+                   <div class="card mx-0" >
                     <img  src="/img/productos/<?= $producto["image"] ?>" width="100%"  height="250px">
                      <div style= "background-color: #efe4d5; align-content: center;" class="card-body">
                          <h5 style= "color: #bfb29f; text-align: center;" class="card-title"><?= $producto["name"] ?></h5>

@@ -6,7 +6,7 @@
 
 @section ('mainContent')
 
-<div class="container1">
+<div class="container">
 	<div class="row">
 
 		<!-- principio del registro-->

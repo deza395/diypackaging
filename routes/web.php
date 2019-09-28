@@ -41,10 +41,14 @@ Route::get('/productos/{categoria}', 'ProductosController@getByCategory');
 Route::get('/productos/{categoria}/{subcategoria}', 'ProductosController@getByCategorySubCategoria');
 
  // ruta productos
+
+
  Route::get('/producto/{id}', 'ProductosController@getById');
+ Route::group(['middleware' => 'isAdmin'], function () {
  Route::post('/producto/delete/{id}', 'ProductosController@destroy');
  Route::get('/producto/editar/{id}', 'ProductosController@edit');
  Route::post('/producto/editar/{id}', 'ProductosController@update');
+ });
  //Route::post('/producto/crear', 'ProductosController@store');
 
 
