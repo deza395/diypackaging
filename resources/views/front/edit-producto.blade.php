@@ -1,4 +1,4 @@
-++6599 @include('front.lista_productos')
+@include('front.lista_productos')
 @extends('front.template')
 
 @section('pageTitle', 'productos')

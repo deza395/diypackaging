@@ -45,6 +45,7 @@ class UserController extends Controller
       $producto->ref = $request['ref'];
       $producto->image = $productImageName;
       $producto->category = $request['category'];
+      $producto->subcategory = $request['subcategory'];
       $producto->save();
       return redirect('/perfil');
     }

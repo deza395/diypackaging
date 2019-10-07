@@ -81,12 +81,35 @@
               @enderror
             </label>
             <label class="campo-formulario d-block" for="category">
-              <input
-              type="text"
-              name="category"
-              class="form-control @error('category') is-invalid @enderror"
+              <select
+        			class="form-control @error('category') is-invalid @enderror"
+        			name="category"
+        			id="category"
               value="{{old('category')}}"
-              placeholder="Categoria del producto">
+        			>
+        			<option value="Caja">Caja</option>
+        			<option value="Bolsa">Bolsa</option>
+
+        		</select>
+              @error('category')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+            </label>
+            <label class="campo-formulario d-block" for="subcategory">
+              <select
+        			class="form-control @error('subcategory') is-invalid @enderror"
+        			name="subcategory"
+        			id="subcategory"
+              value="{{old('subcategory')}}"
+        			>
+        			<option value="Grande">Grande</option>
+        			<option value="Liso">Liso</option>
+              <option value="Estampado">Estampado</option>
+              <option value="Chica">Chica</option>
+
+        		</select>
               @error('category')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
